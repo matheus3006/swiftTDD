@@ -29,7 +29,7 @@ protocol HttpPostClient{
 
 class RemoteAddAccountTests: XCTestCase {
     
-    func test_() throws {
+    func test_add_should_call_httpClient_with_correct_url() throws {
         let url = URL(string:"http://any-url.com")!
         let httpClientSpy = HttpClientSpy()
         
@@ -40,6 +40,13 @@ class RemoteAddAccountTests: XCTestCase {
         
     }
 
+    
+
+}
+
+
+extension RemoteAddAccountTests{
+    
     class HttpClientSpy: HttpPostClient {
         var url : URL?
         func post(url: URL) {
@@ -48,5 +55,4 @@ class RemoteAddAccountTests: XCTestCase {
         }
 
     }
-
 }
