@@ -15,6 +15,7 @@
 		57FF0EDC28537860003F1399 /* Data.h in Headers */ = {isa = PBXBuildFile; fileRef = 57FF0ED028537860003F1399 /* Data.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		57FF0EE428537A43003F1399 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5759523F2852C78E00883D5E /* Domain.framework */; };
 		57FF0EE528537A43003F1399 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5759523F2852C78E00883D5E /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		57FF0EEA2853B598003F1399 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FF0EE92853B598003F1399 /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		57FF0ED028537860003F1399 /* Data.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Data.h; sourceTree = "<group>"; };
 		57FF0ED528537860003F1399 /* DataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		57FF0EDA28537860003F1399 /* RemoteAddAccountTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAddAccountTests.swift; sourceTree = "<group>"; };
+		57FF0EE92853B598003F1399 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 			children = (
 				575952462852C7BD00883D5E /* AddAccount.swift */,
 				575952492852C7E500883D5E /* AccountModel.swift */,
+				57FF0EE92853B598003F1399 /* Model.swift */,
 				575952412852C78E00883D5E /* Domain.h */,
 			);
 			path = Domain;
@@ -289,6 +292,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57FF0EEA2853B598003F1399 /* Model.swift in Sources */,
 				575952472852C7BD00883D5E /* AddAccount.swift in Sources */,
 				5759524A2852C7E500883D5E /* AccountModel.swift in Sources */,
 			);
