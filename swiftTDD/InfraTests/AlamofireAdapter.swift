@@ -39,17 +39,12 @@ class AlamofireAdapterTests: XCTestCase {
     }
     
     func test_post_should_make_request_with_no_data() throws {
-        let url = makeURL()
-        let configuration = URLSessionConfiguration.default
-        configuration.protocolClasses = [UrlProtocolStub.self]
-        let session=Session(configuration:configuration)
-        let sut=AlamofireAdapter(session:session)
+        let sut = makeSut()
 
-        sut.post(to: url, with: nil)
+        sut.post(to: makeURL(), with: nil)
         let exp = expectation(description: "waiting")
         UrlProtocolStub.observeRequest { request in
-            XCTAssertEqual(url, request.url)
-            XCTAssertEqual("POST",request.httpMethod)
+            
             XCTAssertNil(request.httpBodyStream)
 
             exp.fulfill()
@@ -62,6 +57,16 @@ class AlamofireAdapterTests: XCTestCase {
 
 }
 
+extension AlamofireAdapterTests{
+    func makeSut()->AlamofireAdapter{
+        let configuration = URLSessionConfiguration.default
+        configuration.protocolClasses = [UrlProtocolStub.self]
+        let session=Session(configuration:configuration)
+        return AlamofireAdapter(session:session)
+        
+    }
+}
+   
 
 class UrlProtocolStub: URLProtocol {
     static var emit: ((URLRequest)-> Void)?
