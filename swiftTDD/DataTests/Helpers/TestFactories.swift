@@ -16,3 +16,8 @@ func makeError()-> Error{
 func makeURL() -> URL {
     return URL(string:"http://any-url.com")!
 }
+
+func makeHttpResponse(statusCode: Int = 200)->HTTPURLResponse{
+    return HTTPURLResponse(url:makeURL(),statusCode:statusCode,httpVersion:nil,headerFields:nil)!
+
+}
