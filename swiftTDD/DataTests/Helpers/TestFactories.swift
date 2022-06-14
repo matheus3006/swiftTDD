@@ -21,3 +21,7 @@ func makeHttpResponse(statusCode: Int = 200)->HTTPURLResponse{
     return HTTPURLResponse(url:makeURL(),statusCode:statusCode,httpVersion:nil,headerFields:nil)!
 
 }
+
+func makeEmptyData() -> Data {
+    return Data()
+}
