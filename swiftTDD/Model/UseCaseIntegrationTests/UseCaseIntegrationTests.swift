@@ -7,7 +7,7 @@ class UseCaseIntegrationTests: XCTestCase {
 
     func test_add_account(){
         let alamofireAdapter=AlamofireAdapter()
-        let url = URL(string:"https://clean-node-api.herokuapp.com/api/signup")!
+        let url = URL(string:"http://localhost:5050/api/signup")!
         let sut=RemoteAddAccount(url:url,httpClient:alamofireAdapter)
         let addAccountModel=AddAccountModel(name:"Matheus de Souza",email:"matheussouza18bussiness@gmail.com",
                                             password:"secret",passwordConfirmation:"secret")

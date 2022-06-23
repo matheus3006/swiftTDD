@@ -197,7 +197,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		575952242852C71F00883D5E = {
+		5718116F28651520001A9C77 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				575952402852C78E00883D5E /* Domain */,
@@ -206,8 +206,24 @@
 				575DD0592857CC00008AA443 /* Infra */,
 				575DD0632857CC00008AA443 /* InfraTests */,
 				579FCB87286206F500194276 /* UseCaseIntegrationTests */,
-				5759522F2852C71F00883D5E /* Products */,
 				57FF0EE328537A43003F1399 /* Frameworks */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		57181170286515EE001A9C77 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		575952242852C71F00883D5E = {
+			isa = PBXGroup;
+			children = (
+				5718116F28651520001A9C77 /* Model */,
+				57181170286515EE001A9C77 /* Presenter */,
+				5759522F2852C71F00883D5E /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -337,6 +353,7 @@
 			children = (
 			);
 			name = Frameworks;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		57FF0EEF2853B6FD003F1399 /* UseCases */ = {
