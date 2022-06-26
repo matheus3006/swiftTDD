@@ -27,6 +27,7 @@
 		575DD0792857CF58008AA443 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 575DD0782857CF58008AA443 /* Alamofire */; };
 		57670C262868A2220088600B /* AccountModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575DD0512857C645008AA443 /* AccountModelFactory.swift */; };
 		57670C2728691ACE0088600B /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575DD0492857C43D008AA443 /* TestExtensions.swift */; };
+		57670C2928691DD80088600B /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57670C2828691DD80088600B /* LoadingView.swift */; };
 		5787D81B2856328800256647 /* DomainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5787D81A2856328800256647 /* DomainError.swift */; };
 		5787D81D2856392000256647 /* HttpError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5787D81C2856392000256647 /* HttpError.swift */; };
 		579FCB6B2860F37700194276 /* AlamofireAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579FCB6A2860F37700194276 /* AlamofireAdapter.swift */; };
@@ -168,6 +169,7 @@
 		575DD05A2857CC00008AA443 /* Infra.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Infra.h; sourceTree = "<group>"; };
 		575DD05F2857CC00008AA443 /* InfraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InfraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		575DD0642857CC00008AA443 /* AlamofireAdapterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAdapterTest.swift; sourceTree = "<group>"; };
+		57670C2828691DD80088600B /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		5787D81A2856328800256647 /* DomainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainError.swift; sourceTree = "<group>"; };
 		5787D81C2856392000256647 /* HttpError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpError.swift; sourceTree = "<group>"; };
 		579FCB6A2860F37700194276 /* AlamofireAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAdapter.swift; sourceTree = "<group>"; };
@@ -404,6 +406,7 @@
 			isa = PBXGroup;
 			children = (
 				57A7BDB82867D739001807FE /* AlertView.swift */,
+				57670C2828691DD80088600B /* LoadingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -839,6 +842,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				57A7BDB02867D66F001807FE /* SignUpPresenter.swift in Sources */,
+				57670C2928691DD80088600B /* LoadingView.swift in Sources */,
 				57A7BDB92867D739001807FE /* AlertView.swift in Sources */,
 				57A7BDBE2867DC02001807FE /* EmailValidator.swift in Sources */,
 			);
