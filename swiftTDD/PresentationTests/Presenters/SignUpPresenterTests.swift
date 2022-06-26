@@ -9,7 +9,7 @@ class SignUpPresenterTests: XCTestCase {
         
         sut.signUp(viewModel: makeSignUpViewModel(name: nil))
         
-        XCTAssertEqual(alertViewSpy.viewModel, AlertViewModel(title:"Falha na validação", message: "O campo nome é obrigatório"))
+        XCTAssertEqual(alertViewSpy.viewModel, makeAlertViewModel(fieldName: "O campo nome é obrigatório"))
     }
     
     
@@ -19,7 +19,8 @@ class SignUpPresenterTests: XCTestCase {
         
         sut.signUp(viewModel: makeSignUpViewModel(email: nil))
         
-        XCTAssertEqual(alertViewSpy.viewModel, AlertViewModel(title:"Falha na validação", message: "O campo email é obrigatório"))
+       
+        XCTAssertEqual(alertViewSpy.viewModel, makeAlertViewModel(fieldName: "O campo email é obrigatório"))
     }
     
     
@@ -29,7 +30,7 @@ class SignUpPresenterTests: XCTestCase {
         
         sut.signUp(viewModel: makeSignUpViewModel(password: nil))
         
-        XCTAssertEqual(alertViewSpy.viewModel, AlertViewModel(title:"Falha na validação", message: "O campo senha é obrigatório"))
+        XCTAssertEqual(alertViewSpy.viewModel, makeAlertViewModel(fieldName: "O campo senha é obrigatório"))
     }
     
     
@@ -39,7 +40,7 @@ class SignUpPresenterTests: XCTestCase {
         
         sut.signUp(viewModel: makeSignUpViewModel(passwordConfirmation: nil))
         
-        XCTAssertEqual(alertViewSpy.viewModel, AlertViewModel(title:"Falha na validação", message: "O campo confirmar senha é obrigatório"))
+        XCTAssertEqual(alertViewSpy.viewModel, makeAlertViewModel(fieldName: "O campo confirmar senha é obrigatório"))
     }
     
     
@@ -51,7 +52,7 @@ class SignUpPresenterTests: XCTestCase {
        
         sut.signUp(viewModel: makeSignUpViewModel(passwordConfirmation: "diffent_password"))
         
-        XCTAssertEqual(alertViewSpy.viewModel, AlertViewModel(title:"Falha na validação", message: "Falha ao confirmar senha"))
+        XCTAssertEqual(alertViewSpy.viewModel, makeAlertViewModel(fieldName: "Falha ao confirmar senha"))
     }
     
     
@@ -79,7 +80,7 @@ class SignUpPresenterTests: XCTestCase {
         emailValidatorSpy.simulateInvalidEmail()
         sut.signUp(viewModel: makeSignUpViewModel(email:"invalid_email@email.com"))
         
-        XCTAssertEqual(alertViewSpy.viewModel, AlertViewModel(title:"Falha na validação", message: "Email invalido"))
+        XCTAssertEqual(alertViewSpy.viewModel, makeAlertViewModel(fieldName: "Email invalido"))
     }
     
 }
@@ -95,6 +96,10 @@ extension SignUpPresenterTests{
     
     func makeSignUpViewModel(name: String? = "any_name" ,email: String? = "invalid_email@email.com",password:String? = "any_password",passwordConfirmation:String? = "any_password") -> SignUpViewModel {
         return SignUpViewModel(name: name ,email: email,password: password,passwordConfirmation: passwordConfirmation)
+    }
+    
+    func makeAlertViewModel(fieldName: String) -> AlertViewModel {
+        return AlertViewModel(title:"Falha na validação", message: fieldName)
     }
     
     class AlertViewSpy: AlertView{
