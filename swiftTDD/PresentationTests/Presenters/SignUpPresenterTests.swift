@@ -20,7 +20,7 @@ class SignUpPresenterTests: XCTestCase {
         
         sut.signUp(viewModel: makeSignUpViewModel(email: nil))
         
-       
+        
         XCTAssertEqual(alertViewSpy.viewModel, makeAlertViewModel(messageField: "O campo email é obrigatório"))
     }
     
@@ -50,7 +50,7 @@ class SignUpPresenterTests: XCTestCase {
     func test_signUp_should_show_error_message_if_passwordConfirmation_not_match() throws {
         let alertViewSpy = AlertViewSpy()
         let sut = makeSut(alertView: alertViewSpy)
-       
+        
         sut.signUp(viewModel: makeSignUpViewModel(passwordConfirmation: "diffent_password"))
         
         XCTAssertEqual(alertViewSpy.viewModel, makeAlertViewModel(messageField: "Falha ao confirmar senha"))
@@ -59,10 +59,10 @@ class SignUpPresenterTests: XCTestCase {
     
     
     func test_signUp_should_call_emailValidator_with_correct_email() throws {
-       
+        
         let emailValidatorSpy = EmailValidatorSpy()
         let sut = makeSut(emailValidator: emailValidatorSpy)
-     
+        
         
         let signUpViewModel = makeSignUpViewModel()
         
@@ -87,21 +87,34 @@ class SignUpPresenterTests: XCTestCase {
     
     
     func test_signUp_should_call_addAccount_with_correct_values() throws {
-       let addAccountSpy = AddAccountSpy()
+        let addAccountSpy = AddAccountSpy()
+        
+        
         let sut = makeSut(addAccount: addAccountSpy)
-
+        
         sut.signUp(viewModel: makeSignUpViewModel())
         
         XCTAssertEqual(addAccountSpy.addAccountModel, makeAddAccountModel())
     }
     
+    func test_signUp_should_show_error_message_if_addAccount_fails() throws {
+        let addAccountSpy = AddAccountSpy()
+        let alertViewSpy = AlertViewSpy()
+        let sut = makeSut(alertView: alertViewSpy, addAccount: addAccountSpy)
+        
+        sut.signUp(viewModel: makeSignUpViewModel(email:"invalid_email@email.com"))
+        addAccountSpy.completeWithError(.unexpected)
+        
+        XCTAssertEqual(alertViewSpy.viewModel, makeErrorAlertViewModel(messageField: "Algo inesperado aconteceu, tente novamente em alguns instantes."))
+    }
+    
     
 }
-  
+
 
 extension SignUpPresenterTests{
     func makeSut(alertView: AlertViewSpy = AlertViewSpy(),emailValidator: EmailValidatorSpy = EmailValidatorSpy(), addAccount: AddAccountSpy = AddAccountSpy()) ->  SignUpPresenter{
-       
+        
         let sut = SignUpPresenter(alertView: alertView, emailValidator: emailValidator, addAccount: addAccount)
         
         return sut
@@ -114,6 +127,10 @@ extension SignUpPresenterTests{
     
     func makeAlertViewModel(messageField: String) -> AlertViewModel {
         return AlertViewModel(title:"Falha na validação", message: messageField)
+    }
+    
+    func makeErrorAlertViewModel(messageField: String) -> AlertViewModel {
+        return AlertViewModel(title:"Error", message: messageField)
     }
     
     class AlertViewSpy: AlertView{
@@ -137,15 +154,19 @@ extension SignUpPresenterTests{
         }
     }
     
-   
+    
     
     class AddAccountSpy: AddAccount{
         var addAccountModel: AddAccountModel?
-        
+        var completion: ((Result<AccountModel, DomainError>) -> Void)?
         
         func add(addAccountModel: AddAccountModel, completion: @escaping (Result<AccountModel, DomainError>) -> Void) {
             self.addAccountModel = addAccountModel
-            
+            self.completion = completion
+        }
+        
+        func completeWithError(_ error: DomainError){
+            completion?(.failure(error))
         }
     }
 }

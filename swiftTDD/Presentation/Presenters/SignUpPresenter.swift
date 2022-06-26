@@ -2,6 +2,7 @@
 import Foundation
 import Domain
 
+
 public final class SignUpPresenter{
     private let alertView: AlertView
     private let emailValidator: EmailValidator
@@ -20,7 +21,13 @@ public final class SignUpPresenter{
         } else{
             let addAccountModel = AddAccountModel(name: viewModel.name! , email: viewModel.email! , password: viewModel.password!, passwordConfirmation: viewModel.passwordConfirmation!)
             
-            addAccount.add(addAccountModel: addAccountModel) { _ in
+            addAccount.add(addAccountModel: addAccountModel) { result in
+                switch result {
+                case .failure: self.alertView.showMessage(viewModel: AlertViewModel(title: "Error", message: "Algo inesperado aconteceu, tente novamente em alguns instantes."))
+                case .success: break
+                
+                }
+                
                 
             }
         }
