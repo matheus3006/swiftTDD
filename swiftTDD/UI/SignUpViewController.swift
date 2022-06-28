@@ -16,7 +16,7 @@ extension SignUpViewController : LoadingView{
             loadingIndicator?.startAnimating()
         }else{
             loadingIndicator?.stopAnimating()
-            
+
         }
     }
 }
