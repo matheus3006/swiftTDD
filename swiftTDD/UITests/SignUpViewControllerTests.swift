@@ -22,6 +22,14 @@ class SignUpViewControllerTests: XCTestCase {
         
     }
     
+    func test_loading_implements_AlertView() throws {
+        let sb = UIStoryboard(name: "SignUp", bundle: Bundle(for: SignUpViewController.self))
+        let sut = sb.instantiateViewController(identifier:"SignUpViewController") as! SignUpViewController
+        XCTAssertNotNil(sut as AlertView)
+
+        
+    }
+    
     
 
 }
