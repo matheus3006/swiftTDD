@@ -10,6 +10,7 @@
 		574AFA5E2867B9FC00C5E42E /* Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 574AFA562867B9FB00C5E42E /* Presentation.framework */; };
 		574AFA632867B9FC00C5E42E /* SignUpPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574AFA622867B9FC00C5E42E /* SignUpPresenterTests.swift */; };
 		574AFA642867B9FC00C5E42E /* Presentation.h in Headers */ = {isa = PBXBuildFile; fileRef = 574AFA582867B9FB00C5E42E /* Presentation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		574EEB16286CCBBC000E731A /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574EEB15286CCBBC000E731A /* TestExtensions.swift */; };
 		575952422852C78E00883D5E /* Domain.h in Headers */ = {isa = PBXBuildFile; fileRef = 575952412852C78E00883D5E /* Domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		575952472852C7BD00883D5E /* AddAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575952462852C7BD00883D5E /* AddAccount.swift */; };
 		5759524A2852C7E500883D5E /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575952492852C7E500883D5E /* AccountModel.swift */; };
@@ -183,6 +184,7 @@
 		574AFA582867B9FB00C5E42E /* Presentation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Presentation.h; sourceTree = "<group>"; };
 		574AFA5D2867B9FC00C5E42E /* PresentationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PresentationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		574AFA622867B9FC00C5E42E /* SignUpPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenterTests.swift; sourceTree = "<group>"; };
+		574EEB15286CCBBC000E731A /* TestExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestExtensions.swift; sourceTree = "<group>"; };
 		5759523F2852C78E00883D5E /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		575952412852C78E00883D5E /* Domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Domain.h; sourceTree = "<group>"; };
 		575952462852C7BD00883D5E /* AddAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccount.swift; sourceTree = "<group>"; };
@@ -381,6 +383,14 @@
 			path = Scenes;
 			sourceTree = "<group>";
 		};
+		574EEB14286CCB87000E731A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				574EEB15286CCBBC000E731A /* TestExtensions.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		575952242852C71F00883D5E = {
 			isa = PBXGroup;
 			children = (
@@ -528,6 +538,7 @@
 		579E902D286A8200005EAF47 /* UITests */ = {
 			isa = PBXGroup;
 			children = (
+				574EEB14286CCB87000E731A /* Helpers */,
 				574EEB13286CCB62000E731A /* Scenes */,
 			);
 			path = UITests;
@@ -1140,6 +1151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				579E9038286A834C005EAF47 /* SignUpViewControllerTests.swift in Sources */,
+				574EEB16286CCBBC000E731A /* TestExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

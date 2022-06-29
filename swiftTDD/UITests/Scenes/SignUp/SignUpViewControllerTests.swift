@@ -9,15 +9,15 @@ class SignUpViewControllerTests: XCTestCase {
         let sut = makeSut()
         
         XCTAssertEqual(sut.loadingIndicator?.isAnimating,false)
-
+        
         
     }
     
     func test_loading_implements_loadingView() throws {
         let sut = makeSut()
-     
+        
         XCTAssertNotNil(sut as LoadingView)
-
+        
         
     }
     
@@ -26,7 +26,7 @@ class SignUpViewControllerTests: XCTestCase {
         
         
         XCTAssertNotNil(sut as AlertView)
-       
+        
     }
     
     func test_saveButton_calls_signUp_on_tap() throws {
@@ -41,13 +41,13 @@ class SignUpViewControllerTests: XCTestCase {
         
         sut.saveButton?.simulateTap()
         XCTAssertEqual(signUpViewModel, SignUpViewModel(name: name, email: email, password: password, passwordConfirmation: passwordConfirmation))
-       
+        
     }
     
     
-
+    
 }
-  
+
 extension SignUpViewControllerTests {
     func makeSut(signUpSpy: ((SignUpViewModel)-> Void)? = nil ) -> SignUpViewController {
         let sb = UIStoryboard(name: "SignUp", bundle: Bundle(for: SignUpViewController.self))
@@ -59,20 +59,7 @@ extension SignUpViewControllerTests {
         return sut
     }
     
-}
-
-extension UIControl {
-    func simulate(event: UIControl.Event){
-        allTargets.forEach { target in
-            actions(forTarget: target, forControlEvent: event)?.forEach({ action in
-                (target as NSObject).perform(Selector(action))
-            })
-        }
-    }
     
-    func simulateTap(){
-        simulate(event: .touchUpInside)
-    }
     
     
 }
