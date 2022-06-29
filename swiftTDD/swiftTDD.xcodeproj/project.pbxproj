@@ -11,6 +11,7 @@
 		574AFA632867B9FC00C5E42E /* SignUpPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574AFA622867B9FC00C5E42E /* SignUpPresenterTests.swift */; };
 		574AFA642867B9FC00C5E42E /* Presentation.h in Headers */ = {isa = PBXBuildFile; fileRef = 574AFA582867B9FB00C5E42E /* Presentation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		574EEB16286CCBBC000E731A /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574EEB15286CCBBC000E731A /* TestExtensions.swift */; };
+		574EEB1A286CDA88000E731A /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 574EEB19286CDA88000E731A /* SignUp.storyboard */; };
 		575952422852C78E00883D5E /* Domain.h in Headers */ = {isa = PBXBuildFile; fileRef = 575952412852C78E00883D5E /* Domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		575952472852C7BD00883D5E /* AddAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575952462852C7BD00883D5E /* AddAccount.swift */; };
 		5759524A2852C7E500883D5E /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575952492852C7E500883D5E /* AccountModel.swift */; };
@@ -42,7 +43,6 @@
 		579E9030286A8200005EAF47 /* UI.h in Headers */ = {isa = PBXBuildFile; fileRef = 579E9024286A8200005EAF47 /* UI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		579E9038286A834C005EAF47 /* SignUpViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579E9037286A834C005EAF47 /* SignUpViewControllerTests.swift */; };
 		579E903A286A8415005EAF47 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579E9039286A8415005EAF47 /* SignUpViewController.swift */; };
-		579E903C286A846D005EAF47 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 579E903B286A846D005EAF47 /* SignUp.storyboard */; };
 		579FCB6B2860F37700194276 /* AlamofireAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579FCB6A2860F37700194276 /* AlamofireAdapter.swift */; };
 		579FCB6F2860F4EC00194276 /* UrlProtocolStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579FCB6E2860F4EC00194276 /* UrlProtocolStub.swift */; };
 		579FCB89286206F500194276 /* UseCaseIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579FCB88286206F500194276 /* UseCaseIntegrationTests.swift */; };
@@ -185,6 +185,7 @@
 		574AFA5D2867B9FC00C5E42E /* PresentationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PresentationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		574AFA622867B9FC00C5E42E /* SignUpPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenterTests.swift; sourceTree = "<group>"; };
 		574EEB15286CCBBC000E731A /* TestExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestExtensions.swift; sourceTree = "<group>"; };
+		574EEB19286CDA88000E731A /* SignUp.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SignUp.storyboard; path = "../../../../../../../Downloads/clean-swift-app-master/UI/Scenes/SignUp/SignUp.storyboard"; sourceTree = "<group>"; };
 		5759523F2852C78E00883D5E /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		575952412852C78E00883D5E /* Domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Domain.h; sourceTree = "<group>"; };
 		575952462852C7BD00883D5E /* AddAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccount.swift; sourceTree = "<group>"; };
@@ -212,7 +213,6 @@
 		579E9029286A8200005EAF47 /* UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		579E9037286A834C005EAF47 /* SignUpViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewControllerTests.swift; sourceTree = "<group>"; };
 		579E9039286A8415005EAF47 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		579E903B286A846D005EAF47 /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
 		579FCB6A2860F37700194276 /* AlamofireAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAdapter.swift; sourceTree = "<group>"; };
 		579FCB6E2860F4EC00194276 /* UrlProtocolStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlProtocolStub.swift; sourceTree = "<group>"; };
 		579FCB86286206F500194276 /* UseCaseIntegrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UseCaseIntegrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -354,7 +354,7 @@
 			isa = PBXGroup;
 			children = (
 				579E9039286A8415005EAF47 /* SignUpViewController.swift */,
-				579E903B286A846D005EAF47 /* SignUp.storyboard */,
+				574EEB19286CDA88000E731A /* SignUp.storyboard */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -1045,7 +1045,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				579E903C286A846D005EAF47 /* SignUp.storyboard in Resources */,
+				574EEB1A286CDA88000E731A /* SignUp.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
