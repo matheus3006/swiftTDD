@@ -348,6 +348,39 @@
 			path = PresentationTests;
 			sourceTree = "<group>";
 		};
+		574EEB10286CCAF6000E731A /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				579E9039286A8415005EAF47 /* SignUpViewController.swift */,
+				579E903B286A846D005EAF47 /* SignUp.storyboard */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		574EEB11286CCB1D000E731A /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				579E9037286A834C005EAF47 /* SignUpViewControllerTests.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		574EEB12286CCB52000E731A /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				574EEB10286CCAF6000E731A /* SignUp */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		574EEB13286CCB62000E731A /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				574EEB11286CCB1D000E731A /* SignUp */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
 		575952242852C71F00883D5E = {
 			isa = PBXGroup;
 			children = (
@@ -486,8 +519,7 @@
 		579E9023286A8200005EAF47 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				579E9039286A8415005EAF47 /* SignUpViewController.swift */,
-				579E903B286A846D005EAF47 /* SignUp.storyboard */,
+				574EEB12286CCB52000E731A /* Scenes */,
 				579E9024286A8200005EAF47 /* UI.h */,
 			);
 			path = UI;
@@ -496,7 +528,7 @@
 		579E902D286A8200005EAF47 /* UITests */ = {
 			isa = PBXGroup;
 			children = (
-				579E9037286A834C005EAF47 /* SignUpViewControllerTests.swift */,
+				574EEB13286CCB62000E731A /* Scenes */,
 			);
 			path = UITests;
 			sourceTree = "<group>";
