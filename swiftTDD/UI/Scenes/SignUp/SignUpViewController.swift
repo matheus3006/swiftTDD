@@ -20,7 +20,9 @@ final class SignUpViewController:UIViewController{
     
     private func configure() {
         saveButton?.addTarget(self, action: #selector(saveButtonTapped), for: .touchUpInside)
+        
     }
+    
     
     @objc private func saveButtonTapped(){
         let viewModel = SignUpViewModel(name: nameTextField?.text, email: emailTextField?.text, password: passwordTextField?.text, passwordConfirmation: passwordConfirmationTextField?.text)
