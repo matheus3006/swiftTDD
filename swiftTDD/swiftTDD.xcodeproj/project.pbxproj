@@ -33,6 +33,7 @@
 		5787D81B2856328800256647 /* DomainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5787D81A2856328800256647 /* DomainError.swift */; };
 		5787D81D2856392000256647 /* HttpError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5787D81C2856392000256647 /* HttpError.swift */; };
 		57888320286CF4EF009FAAB8 /* UiViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5788831F286CF4EF009FAAB8 /* UiViewControllerExtensions.swift */; };
+		57888323286CF660009FAAB8 /* StoryBoarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57888322286CF660009FAAB8 /* StoryBoarded.swift */; };
 		579E8FF0286A6917005EAF47 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579E8FEF286A6917005EAF47 /* SignUpViewModel.swift */; };
 		579E8FF2286A6974005EAF47 /* SignUpMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579E8FF1286A6974005EAF47 /* SignUpMapper.swift */; };
 		579E8FF6286A6B4C005EAF47 /* AlertViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579E8FF5286A6B4C005EAF47 /* AlertViewSpy.swift */; };
@@ -203,6 +204,7 @@
 		5787D81A2856328800256647 /* DomainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainError.swift; sourceTree = "<group>"; };
 		5787D81C2856392000256647 /* HttpError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpError.swift; sourceTree = "<group>"; };
 		5788831F286CF4EF009FAAB8 /* UiViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiViewControllerExtensions.swift; sourceTree = "<group>"; };
+		57888322286CF660009FAAB8 /* StoryBoarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBoarded.swift; sourceTree = "<group>"; };
 		579E8FEF286A6917005EAF47 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		579E8FF1286A6974005EAF47 /* SignUpMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpMapper.swift; sourceTree = "<group>"; };
 		579E8FF5286A6B4C005EAF47 /* AlertViewSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewSpy.swift; sourceTree = "<group>"; };
@@ -481,6 +483,7 @@
 			isa = PBXGroup;
 			children = (
 				5788831F286CF4EF009FAAB8 /* UiViewControllerExtensions.swift */,
+				57888322286CF660009FAAB8 /* StoryBoarded.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -1153,6 +1156,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57888323286CF660009FAAB8 /* StoryBoarded.swift in Sources */,
 				57888320286CF4EF009FAAB8 /* UiViewControllerExtensions.swift in Sources */,
 				579E903A286A8415005EAF47 /* SignUpViewController.swift in Sources */,
 			);
