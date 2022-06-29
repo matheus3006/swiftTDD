@@ -42,7 +42,7 @@
 		579E902A286A8200005EAF47 /* UI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 579E9022286A81FF005EAF47 /* UI.framework */; };
 		579E9030286A8200005EAF47 /* UI.h in Headers */ = {isa = PBXBuildFile; fileRef = 579E9024286A8200005EAF47 /* UI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		579E9038286A834C005EAF47 /* SignUpViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579E9037286A834C005EAF47 /* SignUpViewControllerTests.swift */; };
-		579E903A286A8415005EAF47 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579E9039286A8415005EAF47 /* SignUpViewController.swift */; };
+		579E903A286A8415005EAF47 /*  .swift in Sources */ = {isa = PBXBuildFile; fileRef = 579E9039286A8415005EAF47 /*  .swift */; };
 		579FCB6B2860F37700194276 /* AlamofireAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579FCB6A2860F37700194276 /* AlamofireAdapter.swift */; };
 		579FCB6F2860F4EC00194276 /* UrlProtocolStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579FCB6E2860F4EC00194276 /* UrlProtocolStub.swift */; };
 		579FCB89286206F500194276 /* UseCaseIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579FCB88286206F500194276 /* UseCaseIntegrationTests.swift */; };
@@ -212,7 +212,7 @@
 		579E9024286A8200005EAF47 /* UI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UI.h; sourceTree = "<group>"; };
 		579E9029286A8200005EAF47 /* UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		579E9037286A834C005EAF47 /* SignUpViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewControllerTests.swift; sourceTree = "<group>"; };
-		579E9039286A8415005EAF47 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		579E9039286A8415005EAF47 /*  .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " .swift"; sourceTree = "<group>"; };
 		579FCB6A2860F37700194276 /* AlamofireAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAdapter.swift; sourceTree = "<group>"; };
 		579FCB6E2860F4EC00194276 /* UrlProtocolStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlProtocolStub.swift; sourceTree = "<group>"; };
 		579FCB86286206F500194276 /* UseCaseIntegrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UseCaseIntegrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -353,7 +353,7 @@
 		574EEB10286CCAF6000E731A /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
-				579E9039286A8415005EAF47 /* SignUpViewController.swift */,
+				579E9039286A8415005EAF47 /*  .swift */,
 				574EEB19286CDA88000E731A /* SignUp.storyboard */,
 			);
 			path = SignUp;
@@ -1142,7 +1142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				579E903A286A8415005EAF47 /* SignUpViewController.swift in Sources */,
+				579E903A286A8415005EAF47 /*  .swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
