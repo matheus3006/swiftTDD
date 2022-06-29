@@ -12,5 +12,6 @@ extension UIControl {
     
     func simulateTap(){
         simulate(event: .touchUpInside)
+        
     }
 }
