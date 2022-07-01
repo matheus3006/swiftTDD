@@ -60,6 +60,7 @@
 		57ABFA72286F7E5400854C14 /* Validation.h in Headers */ = {isa = PBXBuildFile; fileRef = 57ABFA66286F7E5400854C14 /* Validation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		57ABFA79286F7F3600854C14 /* Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 574AFA562867B9FB00C5E42E /* Presentation.framework */; platformFilter = ios; };
 		57ABFA7A286F7F3600854C14 /* Presentation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 574AFA562867B9FB00C5E42E /* Presentation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		57ABFA7F286F842F00854C14 /* EmailValidatorAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57ABFA7E286F842F00854C14 /* EmailValidatorAdapter.swift */; };
 		57FF0ED628537860003F1399 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57FF0ECE28537860003F1399 /* Data.framework */; };
 		57FF0EDB28537860003F1399 /* RemoteAddAccountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FF0EDA28537860003F1399 /* RemoteAddAccountTests.swift */; };
 		57FF0EDC28537860003F1399 /* Data.h in Headers */ = {isa = PBXBuildFile; fileRef = 57FF0ED028537860003F1399 /* Data.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -259,6 +260,7 @@
 		57ABFA66286F7E5400854C14 /* Validation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Validation.h; sourceTree = "<group>"; };
 		57ABFA6B286F7E5400854C14 /* ValidationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ValidationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		57ABFA70286F7E5400854C14 /* EmailValidatorAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidatorAdapterTests.swift; sourceTree = "<group>"; };
+		57ABFA7E286F842F00854C14 /* EmailValidatorAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidatorAdapter.swift; sourceTree = "<group>"; };
 		57FF0ECE28537860003F1399 /* Data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		57FF0ED028537860003F1399 /* Data.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Data.h; sourceTree = "<group>"; };
 		57FF0ED528537860003F1399 /* DataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -689,6 +691,7 @@
 			isa = PBXGroup;
 			children = (
 				57ABFA66286F7E5400854C14 /* Validation.h */,
+				57ABFA7E286F842F00854C14 /* EmailValidatorAdapter.swift */,
 			);
 			path = Validation;
 			sourceTree = "<group>";
@@ -1098,6 +1101,7 @@
 					};
 					57ABFA63286F7E5400854C14 = {
 						CreatedOnToolsVersion = 13.2.1;
+						LastSwiftMigration = 1320;
 					};
 					57ABFA6A286F7E5400854C14 = {
 						CreatedOnToolsVersion = 13.2.1;
@@ -1321,6 +1325,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57ABFA7F286F842F00854C14 /* EmailValidatorAdapter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1941,6 +1946,7 @@
 		57ABFA73286F7E5400854C14 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1963,6 +1969,7 @@
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -1970,6 +1977,7 @@
 		57ABFA74286F7E5400854C14 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1999,6 +2007,7 @@
 		57ABFA75286F7E5400854C14 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = XB2B84QSK3;
@@ -2015,6 +2024,7 @@
 		57ABFA76286F7E5400854C14 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = XB2B84QSK3;
