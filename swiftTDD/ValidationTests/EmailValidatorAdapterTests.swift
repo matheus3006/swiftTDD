@@ -15,7 +15,7 @@ public class EmailValidatorAdapter : EmailValidator{
 
 class EmailValidatorAdapterTests: XCTestCase {
     func test_invalid_emails() throws {
-        let sut = EmailValidatorAdapter()
+        let sut = makeSut()
         
         XCTAssertFalse(sut.isValid(email:"rr"))
         XCTAssertFalse(sut.isValid(email:"rr@"))
@@ -24,7 +24,7 @@ class EmailValidatorAdapterTests: XCTestCase {
         XCTAssertFalse(sut.isValid(email:"@rr.com"))
     }
     func test_valid_emails() throws {
-        let sut = EmailValidatorAdapter()
+        let sut = makeSut()
         
         XCTAssertTrue(sut.isValid(email:"matheuss2@gmail.com"))
         XCTAssertTrue(sut.isValid(email:"mathe@hotmail.com"))
@@ -33,4 +33,12 @@ class EmailValidatorAdapterTests: XCTestCase {
     
     
 
+}
+
+extension EmailValidatorAdapterTests{
+    func makeSut() -> EmailValidatorAdapter {
+        return EmailValidatorAdapter()
+    }
+    
+    
 }
