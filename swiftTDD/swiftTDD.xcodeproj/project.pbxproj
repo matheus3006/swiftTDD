@@ -80,6 +80,9 @@
 		57ABFACF286FBDE800854C14 /* ControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57ABFACE286FBDE800854C14 /* ControllerFactory.swift */; };
 		57CB96E72874D51600A2564D /* UseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CB96E62874D51600A2564D /* UseCaseFactory.swift */; };
 		57CB96EA2874D5EE00A2564D /* SignUpComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CB96E92874D5EE00A2564D /* SignUpComposer.swift */; };
+		57CB96EC2874DD8800A2564D /* SignUpIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CB96EB2874DD8800A2564D /* SignUpIntegrationTests.swift */; };
+		57CB96ED2874DE0100A2564D /* AddAccountSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579E8FFB286A6BF7005EAF47 /* AddAccountSpy.swift */; };
+		57CB96EE2874DE5B00A2564D /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575DD0492857C43D008AA443 /* TestExtensions.swift */; };
 		57FF0ED628537860003F1399 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57FF0ECE28537860003F1399 /* Data.framework */; };
 		57FF0EDB28537860003F1399 /* RemoteAddAccountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FF0EDA28537860003F1399 /* RemoteAddAccountTests.swift */; };
 		57FF0EDC28537860003F1399 /* Data.h in Headers */ = {isa = PBXBuildFile; fileRef = 57FF0ED028537860003F1399 /* Data.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -363,6 +366,7 @@
 		57ABFACE286FBDE800854C14 /* ControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerFactory.swift; sourceTree = "<group>"; };
 		57CB96E62874D51600A2564D /* UseCaseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseFactory.swift; sourceTree = "<group>"; };
 		57CB96E92874D5EE00A2564D /* SignUpComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpComposer.swift; sourceTree = "<group>"; };
+		57CB96EB2874DD8800A2564D /* SignUpIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpIntegrationTests.swift; sourceTree = "<group>"; };
 		57FF0ECE28537860003F1399 /* Data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		57FF0ED028537860003F1399 /* Data.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Data.h; sourceTree = "<group>"; };
 		57FF0ED528537860003F1399 /* DataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -856,6 +860,7 @@
 		57ABFA9C286FBB4600854C14 /* MainTests */ = {
 			isa = PBXGroup;
 			children = (
+				57CB96EB2874DD8800A2564D /* SignUpIntegrationTests.swift */,
 			);
 			path = MainTests;
 			sourceTree = "<group>";
@@ -1351,6 +1356,7 @@
 					};
 					57ABFA98286FBB4600854C14 = {
 						CreatedOnToolsVersion = 13.2.1;
+						LastSwiftMigration = 1320;
 						TestTargetID = 57ABFA83286FBB4500854C14;
 					};
 					57ABFAA2286FBB4600854C14 = {
@@ -1630,6 +1636,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57CB96ED2874DE0100A2564D /* AddAccountSpy.swift in Sources */,
+				57CB96EE2874DE5B00A2564D /* TestExtensions.swift in Sources */,
+				57CB96EC2874DD8800A2564D /* SignUpIntegrationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2463,16 +2472,23 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = XB2B84QSK3;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = souzamath.MainTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Main.app/Main";
@@ -2484,11 +2500,17 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = XB2B84QSK3;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = souzamath.MainTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
